@@ -2,38 +2,67 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: linear-gradient(white,rgb(175,175,175));
+  background-image: linear-gradient(white,rgb(100,100,100));
 	position: relative;
 }
+
 .jumbotron {
 	background-image: url(media/bg.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 }   
-.figure img:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 140, 186, 0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+#home p{
+	font-size: 25px;
+	font-weight: bold;
+	text-shadow: 0 0 6px #EA2027;
+	color:#2e86de ;
+	width:57%;
+	overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  letter-spacing: .10em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
 }
-#photos {
-	padding: 0px 20px;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 57% }
 }
-.img-fluid {
-	margin: 30px 0px 10px 0px;
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
-#carouselCap {
-padding:10px 180px 50px 180px; 
-}
-
 .img-thumbnail {
+	background-color:  rgba(0, 150, 200, 0.5);
+	border-radius: 100%;
 	width: 180px;
 	height: 200px;
+	animation: photo 3s ease-out 2s infinite alternate;
+	transition: 1s;
+}
+@keyframes photo {
+	0% {background-color:#e74c3c;}
+	50% {background-color: green;}
+	100% {background-color:rgba(0, 140, 186, 0.5);}
 }
 
 .img-thumbnail:hover {
-	box-shadow: 0 4px 8px 0 rgba(0, 140, 186, 0.5), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: rgba(0, 140, 186, 0.5);
+	box-shadow: 0 0 20px 5px rgba(0, 140, 186, 0.5);
+	border-radius: 0;
+}
+#pratyush{
+	color: #f1c40f;
+	top: 0px;
+	transition: 1s;
+}
+#pratyush:hover{
+	top:-10px;
 }
 .social-icons a{
-  margin-right: 3em;
+	margin-right: 3em;
 }
 h1{
 	font-family: 'Oswald', sans-serif;
@@ -56,13 +85,9 @@ h4{
 	color: rgb(255, 180, 0);
 }
 .skills-icons i{
-	margin-right: 0.5em;
 	color:rgba(0,0,0,0.7);
 }
-.skills-icons i:hover{
-	color: rgba(0,0,0,1);
-}
-.card i{
+#awards i{
 	color: orange;
 }
 .activities-section {
@@ -77,7 +102,19 @@ h4{
 }   
 
 
+.interests-section {
+	padding:12em 4em;
+	background-image: url(media/guitar.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.modal-body img{
+	width: 20%;
+	box-shadow: 4px 4px 6px 2px #B33771;
+	margin:1em;
 
+}
 #back-to-top {
   position: fixed;
   display: none;
@@ -100,13 +137,14 @@ h4{
 #back-to-top:hover {
   color: #fff;
   background: #2eafec;
-  transition: background 0.2s ease-in-out;
+  transition: background 1s ease-in-out;
+  border-radius: 100%;
 }
 
 #box{
 	border:10px;
-	border-radius: 4px;;
-	box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 10px;;
+	box-shadow:5px 5px 20px -5px red;
 }
 .info i{
 	color:white;
@@ -117,4 +155,7 @@ h4{
 	border-radius: 1.5em;
 	background-color: rgb(0, 157, 255);
 	float: left;
+}
+.gform {
+	display: none;
 }
