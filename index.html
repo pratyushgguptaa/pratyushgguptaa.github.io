@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/564f21f8c6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -15,9 +16,13 @@
     <title>Pratyush Gupta</title>
   </head>
   <body  data-spy="scroll" data-target="#navi" data-offset="150">
-    
-    <nav id="navi" class="navbar sticky-top navbar-dark bg-dark">
+
+    <nav id="navi" class="navbar navbar-expand-lg navbar-light  bg-dark sticky-top">
       <a class="navbar-brand" href="#"><i class="fas fa-file-alt"></i><span id="site"> Resume</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link" href="#about">About</a>
@@ -35,16 +40,21 @@
           <a class="nav-link" href="#activities">Activities</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="#interests">Interests</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
+        
       </ul>
+    </div>
     </nav>
 
 
     <div class="jumbotron" id="home">
       <img src="media/dp.jpeg" class="img-thumbnail" alt="self">
-      <h1 class="display-4 font-weight-bold"><span class="text-warning">PRATYUSH </span><span class="text-danger">GUPTA</span></h1>
-      <p class="lead font-weight-bolder"></p>
+      <p class="">PRATYUSH GUPTA</p>
+      
       <hr class="my-4">
       <div class="social-icons">
         
@@ -56,12 +66,13 @@
 
         <a title="Github" href="https://www.github.com/pratyushgguptaa" target="_blank" ><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
 
-        <a title="Hackerrank" href="https://www.hackerrank.com/abhitiwari888951" target="_blank" ><i class="fa fa-globe fa-2x" area-hidden="true"></i></a>
+        <a title="Hackerrank" href="https://www.hackerrank.com/abhitiwari888951" target="_blank" ><i class="fab fa-hackerrank fa-2x" area-hidden="true"></i></a>
 
         <a title="Twitter" href="https://www.twitter.com/peru786" target="_blank" ><i class="fab fa-twitter fa-2x" aria-hidden="true"></i></a>
       </div>
       <p></p>
-      <a class="btn btn-primary btn-lg" href="#about" role="button" style="background-color: black;">Know about Me!</a>
+      <a class="btn btn-lg btn-primary question message-button-yes" href="#contact" role="button" style="border-radius: 10%">Hire Me</a>
+      <a class="btn btn-primary btn-lg" href="#about" role="button" style="background-color: black;margin-left:1em">Know about Me!</a>
     </div>
 
     <div class="container">
@@ -133,24 +144,62 @@
           </div>
         </div>
       </div>
+      <div class="gap" style="height: 5em"></div>
 
-      <div class="skills-section">
-        <h1 id="skills" style="margin:5em 0em 0.7em 0em;">Skills</h1>
-        <h5>Programming Languages & Tools</h5>
-        <div class="skills-icons">
-          <i class="fab fa-java fa-4x" title="Java Programming"></i>
-          <i class="fab fa-html5 fa-4x" title="HTML 5"></i>
-          <i class="fab fa-css3-alt fa-4x" title="CSS 3"></i>
-          <i class="fab fa-js-square fa-4x" title="JavaScript"></i>
-          <i class="fab fa-bootstrap fa-4x" title="bootstrap"></i>
-        </div>
-      </div>
+      <div id="skills" class="skills-section card bg-info">
+       	<div class="card-header">
+       	<h1 class="card-title">Skills</h1>
+       	<h5 class="card-text">Programming Languages & Tools</h5>
+       	<nav>
+      		<div class="nav nav-tabs card-header-tabs skills-icons" id="nav-tab" role="tablist" >
+          	<a class="nav-item nav-link" id="java-tab" data-toggle="tab" href="#nav-java" role="tab"><i class="fab fa-java fa-4x" title="Java Programming" style="color:#5758BB;"></i></a>
+          	<a class="nav-item nav-link" id="html-tab" data-toggle="tab" href="#nav-html" role="tab"><i class="fab fa-html5 fa-4x" title="HTML 5" style="color:#0abde3;"></i></a>
+          	<a class="nav-item nav-link" id="css-tab" data-toggle="tab" href="#nav-css" role="tab"><i class="fab fa-css3-alt fa-4x" title="CSS 3" style="color: #54a0ff;"></i></a>
+          	<a class="nav-item nav-link" id="js-tab" data-toggle="tab" href="#nav-js" role="tab"><i class="fab fa-js-square fa-4x" title="JavaScript"></i></a>
+          	<a class="nav-item nav-link active" id="bs-tab" data-toggle="tab" href="#nav-bs" role="tab"><i class="fab fa-bootstrap fa-4x" title="bootstrap" style="color: #82589F;"></i></a>
+        	</div>
+      	</nav></div>
+      	<div class="tab-content card-body" id="nav-tabContent">
+      		<div class="tab-pane fade" id="nav-java" role="tabpanel">
+      			<div class="progress" style="height: 20px;">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%; background-color:#5758BB;">70% Class-Based Object-Oriented Java</div>
+						</div><hr>
+						<p class="card-text" style="font-family: 'Source Serif Pro', serif;font-size: 150%;text-shadow: 0 0 4px #5758BB;letter-spacing: -1px;">Received 100 Marks in both: 10th class ICSE and 12th class ISC in Computer Applications (Learning with JAVA).</p>
+      		</div>
 
+      		<div class="tab-pane fade" id="nav-html" role="tabpanel">
+      			<div class="progress" style="height: 20px;">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color:#0abde3;">100%  Hyper Text Markup Language</div>
+						</div><hr>
+						<p class="card-text" style="font-family: 'Source Serif Pro', serif;font-size: 150%;text-shadow: 0 0 4px #0abde3;letter-spacing: -1px;">Check my first webpage of a <a href="https://restaurant-menu.netlify.com" style="text-decoration: none;color:#00d2d3" target="_blank">Restaurant menu</a> made only using html and css.</p>
+      		</div>
 
-      <div class="awards-section">  
+      		<div class="tab-pane fade" id="nav-css" role="tabpanel">
+      			<div class="progress" style="height: 20px;">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color:#54a0ff;">100% Cascading Style Sheet</div>
+						</div><hr>
+						<p class="card-text" style="font-family: 'Source Serif Pro', serif;font-size: 150%;text-shadow: 0 0 4px #54a0ff;letter-spacing: -1px;">Check my first webpage of a <a href="https://restaurant-menu.netlify.com" style="text-decoration: none;color:#00d2d3" target="_blank">Restaurant menu</a> made only using html and css.</p>
+      		</div>
+
+      		<div class="tab-pane fade" id="nav-js" role="tabpanel">
+      			<div class="progress" style="height: 20px;">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%; background-color:#212529;">70% Java Script</div>
+						</div><hr>
+						<p class="card-text" style="font-family: 'Source Serif Pro', serif;font-size: 150%;text-shadow: 0 0 4px #212529;letter-spacing: -1px;">Love Using JavaScript along with its library JQuery.</p>
+					</div>
+      		<div class="tab-pane fade show active" id="nav-bs" role="tabpanel">
+      			<div class="progress" style="height: 20px;">
+  						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; background-color:#82589F;">100% Bootstrap</div>
+						</div><hr>
+						<p class="card-text" style="font-family: 'Source Serif Pro', serif;font-size: 150%;text-shadow: 0 0 4px #82589F;letter-spacing: -1px;">Checkout my webpage on <a href="https://photography-bootstrap.netlify.com" style="text-decoration: none;color: #82589F;" target="_blank">Photography</a> using Front-end CSS framework Bootstrap.</p>
+      		</div>
+      	</div>
+    	</div>
+
+      <div id="awards" class="awards-section">  
         <div class="card w-100 border-success mb-3" style="width: 18rem;margin-top:7em;">
           <div class="card-header">
-            <h1 id="awards" style="margin: 20px 0px 15px 0px;text-align: center;">Awards & Certifications</h1>
+            <h1 style="margin: 20px 0px 15px 0px;text-align: center;">Awards & Certifications</h1>
           </div>
           <ul class="list-group list-group-flush text-success">
             <li class="list-group-item"><i class="fas fa-award"></i> 2nd Position in CODEKRIEGERS Organized by <a href="https://visionmanit.in/" style="text-decoration: none;">VISION MANIT.</a></li>
@@ -168,6 +217,62 @@
         </div>
     </div>
 
+   <hr> 
+
+    <div class="interests-section" id="interests">
+    	<div class="card container" style="">
+			  <img id="int-img" src="media/interests.jpg" class="card-img-top" alt="My Click">
+			  <div class="card-body">
+			    <h1 class="card-title">Hobbies and Interests</h1>
+			    <p class="card-text"></p>
+			  </div>
+			  <ul class="list-group list-group-flush">
+			    <li class="list-group-item"><i class="fas fa-guitar fa-2x"></i> Guitar: One hour each day I learn to play guitar and going up the beginner's level.</li>
+			    <li class="list-group-item"><i class="fab fa-python fa-2x"></i> Python: Like guitar, I give one hour to learn python.</li>
+			    <li class="list-group-item"><i class="fas fa-camera-retro fa-2x"></i> Photography: Check out my website on Photography. SnapSeed level:expert</li>
+			  </ul>
+			  <div class="card-body">
+			    <a href="https://photography-bootstrap.netlify.com" class="card-link" target="_blank">The Thrill Photographer</a>
+			    <button type="button" class="card-link btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">My clicks</button>
+			  </div>
+			</div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title" id="exampleModalCenterTitle">My clicks edited with <i class="fas fa-feather-alt"></i> Snapseed.</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <img src="media/branches.jpeg" alt="branches">
+		        <img src="media/dog.jpeg" alt="dog">
+		        <img src="media/dragon.jpeg" alt="dragon">
+		        <img src="media/flowers.jpeg" alt="flowers">
+		        <img src="media/fungus.jpeg" alt="fungus">
+		        <img src="media/guitar.jpeg" alt="guitar">
+		        <img src="media/hostel.jpeg" alt="hostel">
+		        <img src="media/kc.jpeg" alt="kc">
+		        <img src="media/light.jpeg" alt="light">
+		        <img src="media/me.jpeg" alt="me">
+		        <img src="media/nandu.jpeg" alt="nandu">
+		        <img src="media/night.jpeg" alt="night">
+		        <img src="media/ntb.jpeg" alt="ntb">
+		        <img src="media/pg.jpeg" alt="pg">
+		        <img src="media/purple.jpeg" alt="purple">
+		        <img src="media/snapseed.jpeg" alt="Snapseed">
+		        <img src="media/tree.jpg" alt="tree">
+		        <img src="media/trunk.jpg" alt="trunk">
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
     <div class="container">
       <div class="contact-section">
@@ -195,30 +300,31 @@
                 </div>
                 <hr>
 
-                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1205.660651819932!2d76.41548450254768!3d27.973749747763375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d55222ebb9c87%3A0x9a06651465cb9da9!2zMjfCsDU4JzI0LjkiTiA3NsKwMjQnNTguNSJF!5e1!3m2!1sen!2sbg!4v1585962471846!5m2!1sen!2sbg" width="275" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1205.660651819932!2d76.41548450254768!3d27.973749747763375!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396d55222ebb9c87%3A0x9a06651465cb9da9!2zMjfCsDU4JzI0LjkiTiA3NsKwMjQnNTguNSJF!5e1!3m2!1sen!2sbg!4v1585962471846!5m2!1sen!2sbg" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
               </div>
             </div>
           </div>
           <div class="col-md-7">
-            <h5 style="text-align: center;">Want to send a message?</h5>
+            <h5 class="question">Want to send a message?</h5>
+            <button class="btn btn-lg question message-button-yes" type="button" style="background-color: rgb(0, 32, 128);color: white;">Click Here!</button>
             <div id="box" class="gform container embed-responsive embed-responsive-1by1"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLScHTySshX6MRUhEqB6h1U-Ass1ZrkxG7hsUdswUlcepgy4iqA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
       
       <a href="#" id="back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
+      <br><br>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
       mybutton = document.getElementById("back-to-top");
+      
       window.onscroll = function() {scrollFunction()};
 
       function scrollFunction() {
@@ -228,7 +334,14 @@
           mybutton.style.display = "none";
         }
       }
-    </script>
+
+      $(".message-button-yes").click(function() {
+      	$(".question").fadeOut();
+      	$(".gform").fadeIn("slow");
+      })
+
+
+
     </script>
   </body>
 </html>
