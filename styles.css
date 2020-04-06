@@ -17,7 +17,7 @@ body {
 	font-weight: bold;
 	text-shadow: 0 0 6px #EA2027;
 	color:#2e86de ;
-	width:57%;
+	width:90%;
 	overflow: hidden;
   border-right: .15em solid orange;
   white-space: nowrap;
@@ -28,7 +28,7 @@ body {
 }
 @keyframes typing {
   from { width: 0 }
-  to { width: 57% }
+  to { width: 90% }
 }
 @keyframes blink-caret {
   from, to { border-color: transparent }
